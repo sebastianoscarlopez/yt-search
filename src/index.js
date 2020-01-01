@@ -1,4 +1,4 @@
-const _cheerio = require( 'cheerio' )
+const _cheerio = require( 'react-native-cheerio' )
 const _dasu = require( 'dasu' )
 const _parallel = require( 'async.parallel' )
 
@@ -8,9 +8,7 @@ const _url = require( 'url' )
 const _querystring = require( 'querystring' )
 
 const YT_SEARCH_QUERY_URI = (
-  'https://www.youtube.com/results?' +
-  'hl=en&gl=US&category=music' +
-  '&search_query='
+  'https://www.youtube.com/results?hl=en&gl=US&category=music&search_query='
 )
 
 const ONE_SECOND = 1000

@@ -16,7 +16,7 @@
     "uglify": "uglifyjs dist/yt-search.js -cmo dist/yt-search.min.js",
     "prepare": "npm run build && npm test",
     "prepublishOnly": "npm run build && npm test",
-    "test:production": "production=1 node test/test.js | faucet",
+    "test:production": "set production=1 && node test/test.js | faucet",
     "test:dev": "node test/test.js | faucet",
     "test": "npm run test:dev && npm run test:production"
   },
@@ -33,10 +33,10 @@
   },
   "dependencies": {
     "async.parallel": "~0.5.2",
-    "cheerio": "~0.22.0",
     "dasu": "0.0.23",
     "minimist": "~1.2.0",
-    "node-fzf": "~0.1.2"
+    "node-fzf": "~0.1.2",
+    "react-native-cheerio": "^1.0.0-rc.4"
   },
   "devDependencies": {
     "babel-core": "~6.26.0",
@@ -45,8 +45,10 @@
     "browserify": "~16.2.3",
     "faucet": "0.0.1",
     "mocha": "~5.2.0",
+    "production": "0.0.2",
     "spacestandard": "~0.2.0",
     "tape": "~4.9.0",
-    "uglify-js": "~3.4.9"
+    "uglify-js": "~3.4.9",
+    "wooster": "^0.3.9"
   }
 }
